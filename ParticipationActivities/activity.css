@@ -1,0 +1,135 @@
+/*
+===========================================
+In-Class CSS Debug Activity (student file)
+===========================================
+
+Instructions for you and your partner:
+1) Open activity.html in your browser.
+2) Work in pairs: one person reads the comment instructions, the other edits code.
+3) Fix each section one by one. Save and refresh to see results.
+4) Do NOT change HTML, only edit this CSS file.
+5) If nothing changes, check spelling of class/id names and make sure the CSS file is linked correctly.
+
+Your task is to correct and complete each selector block below.
+Only use the concepts we already learned in class:
+- tag selectors
+- class selectors
+- ID selectors
+- ul/li styling
+- span styling
+- sibling selector (h3 + p)
+*/
+
+/* =========================
+   1) Tag selector - h1
+   Problem: The background color is not appropriate, and the font-family is missing.
+   Task: Change the background color to something readable, and add a font-family for the heading.
+*/
+h1 {
+    padding: 10px;
+    margin: 20px;
+    border: 3px solid black;
+    background-color: lightblue; /* fix this */
+    font-family: 'Times New Roman', Times, serif;
+    /* missing font-family */
+}
+
+/* =========================
+   2) Paragraph styling
+   Problem: There is no rule for paragraphs yet.
+   Task: Add basic styling to paragraphs so they look neat (use only properties we practiced).
+*/
+
+p {
+   background-color: lightcoral;
+   color: white;
+   border: 5px solid black;
+}
+
+/* =========================
+   3) Span styling
+   Problem: Spans are only bold, but not colored.
+   Task: Make the span text stand out with a color.
+*/
+span {
+    font-weight: bold;
+    color: blue;
+    /* missing color */
+}
+
+/* =========================
+   4) Unordered list and list items
+   Problem: The list style is wrong, and list items are plain black.
+   Task:
+   - Change ul to show a different bullet style (not circle).
+   - Change li text color.
+*/
+ul {
+    list-style-type: square; /* fix this */
+    padding-left: 30px;
+}
+
+ul li {
+    color: purple; /* fix this */
+}
+
+/* =========================
+   5) Sibling selector
+   Problem: The style that should apply to the paragraph immediately after h3 is missing.
+   Task: Add a rule using the sibling selector (h3 + p) inside section.
+*/
+
+h3 + p {
+   color: black;
+   background-color: lightgreen;
+}
+
+/* =========================
+   6) Class selector - .highlight
+   Problem: Background color is too bright and padding/margin are missing.
+   Task: Fix the background color and add spacing inside and around the element.
+*/
+.highlight {
+    background-color: darkgoldenrod; /* fix this */
+    padding: 20px;
+    margin: 20px;
+    /* missing padding and margin */
+}
+
+/* =========================
+   7) ID selector - #unique
+   Problem: The colors make the text hard to read.
+   Task: Fix text and background color, and add spacing to make it stand out.
+*/
+#unique {
+    color: white; /* fix this */
+    background-color: darkmagenta; /* fix this */
+    padding: 5px;
+    /* missing spacing */
+}
+
+/* =========================
+   8) Image styling
+   Problem: Images have no styling.
+   Task: Add a border, margin, and control the size.
+*/
+
+img {
+   border: 20px solid navy;
+   margin: 5px;
+   width: 300px;
+   height: auto;
+}
+
+/* =========================
+   9) Footer styling
+   Problem: Footer has no styling.
+   Task: Add small, centered text and a border on top.
+*/
+
+footer {
+   font-size: 12px;
+   text-align: center;
+   border-top: 2px solid black;
+   padding: 10px;
+}
