@@ -1,0 +1,23 @@
+hi {
+    color: blue;
+    background-color: red;
+    margin: 10px 20px 30px 40px;
+    border: 12px dashed black;
+}
+
+.crazy text {
+    color: yellow;
+    background-color: black
+}
+
+#one{
+    color: purple;
+}
+
+ol li {
+    background-color: red;
+}
+
+section h3 + p {
+    background-color: green;
+}
