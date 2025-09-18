@@ -3,6 +3,9 @@ hi {
     background-color: red;
     margin: 10px 20px 30px 40px;
     border: 12px dashed black;
+    padding: 20%;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .crazy text {
@@ -20,4 +23,9 @@ ol li {
 
 section h3 + p {
     background-color: green;
+}
+
+span {
+    background-color: yellow;
+    color: red;
 }
