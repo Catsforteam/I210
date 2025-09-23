@@ -66,3 +66,11 @@
 .wrap {
   flex-wrap: wrap;
 }
+
+.narrow {
+  width: 200px;
+}
+
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
