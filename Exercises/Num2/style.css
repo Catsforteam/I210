@@ -26,3 +26,19 @@
 .direction-row-reverse {
   flex-direction: row-reverse;
 }
+
+.direction-column {
+  flex-direction: column;
+}
+
+.direction-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
