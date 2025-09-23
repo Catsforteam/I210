@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Teaching Examples</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <h2>Flexbox Step by Step Examples</h2>
+
+  <!-- STEP 1: FLEX-DIRECTION -->
+  <h3>flex-direction: row (default, left → right)</h3>
+  <div class="container direction-row">
+    <div class="box box1">1 (Left)</div>
+    <div class="box box2">2 (Middle)</div>
+    <div class="box box3">3 (Middle)</div>
+    <div class="box box4">4 (Right)</div>
+  </div>
+
+  <h3>flex-direction: row-reverse (right → left)</h3>
+  <div class="container direction-row-reverse">
+    <div class="box box1">1 (Right)</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4 (Left)</div>
+  </div>
+
+  <h3>flex-direction: column (top → bottom)</h3>
+  <div class="container direction-column">
+    <div class="box box1">1 (Top)</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4 (Bottom)</div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h3>flex-direction: column-reverse (bottom → top)</h3>
+  <div class="container direction-column-reverse">
+    <div class="box box1">1 (Bottom)</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4 (Top)</div>
+  </div>
+
+
+
+  <!-- STEP 2: JUSTIFY-CONTENT -->
+  <h3>justify-content: center (all boxes in the middle)</h3>
+  <div class="container justify-center">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+  </div>
+
+  <h3>justify-content: space-between</h3>
+  <div class="container justify-between">
+    <div class="box box1">1 (Start)</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4 (End)</div>
+  </div>
+
+  <h3>justify-content: space-around</h3>
+  <div class="container justify-around">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+  </div>
+
+  <h3>justify-content: space-evenly</h3>
+  <div class="container justify-evenly">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+  </div>
+
+  <!-- STEP 3: ALIGN-ITEMS -->
+  <h3>align-items: flex-start (top)</h3>
+  <div class="container align-start">
+    <div class="box box1">1 (Top)</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+  </div>
+
+  <h3>align-items: center (middle)</h3>
+  <div class="container align-center">
+    <div class="box box1">1 (Middle)</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+  </div>
+
+  <h3>align-items: flex-end (bottom)</h3>
+  <div class="container align-end">
+    <div class="box box1">1 (Bottom)</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+  </div>
+
+  <!-- STEP 4: FLEX-WRAP -->
+  <h3>flex-wrap: nowrap (default, no new line)</h3>
+  <div class="container nowrap narrow">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+  </div>
+
+  <h3>flex-wrap: wrap (items move to next line)</h3>
+  <div class="container wrap narrow">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+  </div>
+
+  <h3>flex-wrap: wrap-reverse (items wrap upward)</h3>
+  <div class="container wrap-reverse narrow">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+/* Common styles for all boxes */
+.box {
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  margin: 5px;
+  text-align: center;
+}
+.box1 { background: green; }
+.box2 { background: orange; }
+.box3 { background: blue; }
+.box4 { background: red; }
+
+/* Give all containers some border and space */
+.container {
+  border: 2px solid black;
+  margin-bottom: 30px;
+  height: 150px; /* enough height to show vertical alignment */
+  display: flex; /* all flex containers start here */
+}
+
+.direction-row {
+  flex-direction: row;
+}
