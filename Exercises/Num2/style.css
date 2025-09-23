@@ -22,3 +22,7 @@
 .direction-row {
   flex-direction: row;
 }
+
+.direction-row-reverse {
+  flex-direction: row-reverse;
+}
