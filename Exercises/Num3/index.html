@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Positioning Examples</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>CSS Positioning Demo</h1>
+  <p>
+    This page demonstrates how different <strong>CSS position values</strong> work.
+    Scroll through each section carefully and observe how the colored boxes behave.
+  </p>
+
+  <!-- ====================================================
+       STATIC POSITION
+  ==================================================== -->
+  <section class="example static-example">
+    <h2>Static Position (default)</h2>
+    <p>
+      By default, every HTML element is <strong>static</strong>. This means it appears
+      in the normal order of the page, one after another, like words in a book.
+    </p>
+    <div class="box static">Static Box</div>
+    <p>
+      Notice how the blue box above sits naturally in the page. The paragraph
+      below flows right under it. Even if we try to give <code>top</code> or
+      <code>left</code>, they will have <em>no effect</em> on a static element.
+    </p>
+  </section>
+
+  <!-- ====================================================
+       RELATIVE POSITION
+  ==================================================== -->
+  <section class="example relative-example">
+    <h2>Relative Position</h2>
+    <p>
+      A <strong>relative</strong> element starts where it would normally be
+      (just like static), but then we can nudge it using
+      <code>top</code>, <code>left</code>, <code>right</code>, or <code>bottom</code>.
+    </p>
+    <div class="box relative">Relative Box</div>
+    <p>
+      Look at the red box: it moved down and to the right. But notice something:
+      the page still reserves the empty space where the box originally belonged.
+      That’s why the paragraph below does not slide up to replace it.
+    </p>
+    <p>
+      Relative is like saying: “Start in your normal spot, then shift yourself
+      a bit, but don’t disturb others.”
+    </p>
+  </section>
+
+  <!-- ====================================================
+       ABSOLUTE POSITION
+  ==================================================== -->
+  <section class="example absolute-example">
+    <h2>Absolute Position</h2>
+    <p>
+      An <strong>absolute</strong> element is completely taken out of the
+      normal page flow. It does not leave empty space behind.
+    </p>
+    <div class="container">
+      <p>
+        This gray container is the <strong>ancestor</strong>.
+        An ancestor simply means the outer box that contains another element.
+      </p>
+      <div class="box absolute">Absolute Box</div>
+      <p>
+        Because this container has <code>position: relative</code>, the green
+        box is pinned inside it, 20px from the top and 20px from the right.
+      </p>
+    </div>
+    <p>
+      If no ancestor has positioning set, an absolute element will pin itself
+      to the entire page (<code>body</code>).
+    </p>
+  </section>
+
+  <!-- ====================================================
+       FIXED POSITION
+  ==================================================== -->
+  <section class="example fixed-example">
+    <h2>Fixed Position</h2>
+    <p>
+      A <strong>fixed</strong> element is pinned to the browser window
+      (also called the viewport), not to the page.
+    </p>
+    <div class="box fixed">Fixed Box</div>
+    <p>
+      The yellow box will always stay at the bottom-right corner of the screen,
+      even if you scroll. Try scrolling down!
+    </p>
+    <div style="height: 1000px;">
+      <p>
+        This tall block of text forces scrolling. Notice that the fixed
+        yellow box does not move with the rest of the content—it is
+        glued to the screen itself.
+      </p>
+      <p>
+        Common uses: sticky navbars, “chat now” buttons, cookie banners,
+        or floating “back to top” arrows.
+      </p>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       Z-INDEX
+  ==================================================== -->
+  <section class="example zindex-example">
+    <h2>Z-Index (Stacking Order)</h2>
+    <p>
+      When elements overlap, <strong>z-index</strong> decides which one
+      appears on top. Higher numbers sit above lower numbers.
+    </p>
+    <div class="stack-container">
+      <div class="box red">Box 1</div>
+      <div class="box blue">Box 2</div>
+      <div class="box green">Box 3 (on top)</div>
+    </div>
+    <p>
+      In this example, green is above blue, and blue is above red, because
+      of their <code>z-index</code> values.
+    </p>
+  </section>
+
+  <footer>
+    <p>
+      End of demo. Quick summary:
+      <br>Static = normal flow
+      <br>Relative = nudge yourself
+      <br>Absolute = pin to ancestor
+      <br>Fixed = pin to screen
+      <br>Z-index = stacking order
+    </p>
+  </footer>
+</body>
+</html>

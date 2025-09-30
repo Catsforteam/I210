@@ -1,0 +1,39 @@
+/* ============================================================
+ GENERAL LOOK (ONLY FOR MAKING DEMO NICE)
+ ------------------------------------------------------------
+ - These styles are just to make the page look neat
+   and the boxes colorful so you can see them clearly.
+ - This part has nothing to do with "position".
+ - You can ignore this section when learning positions.
+ ============================================================ */
+body {
+  font-family: Arial, sans-serif; /* simple clean font */
+  margin: 20px;                   /* space around the page */
+  line-height: 1.5;               /* make text easy to read */
+}
+
+.example {
+  margin-bottom: 80px; /* leave big space after each example */
+}
+
+.box {
+  width: 150px;           /* how wide the box is */
+  height: 100px;          /* how tall the box is */
+  border: 2px solid black;/* black border so edges are clear */
+  text-align: center;     /* center text left-to-right */
+  line-height: 100px;     /* center text top-to-bottom */
+  margin: 20px 0;         /* little space above and below box */
+  font-weight: bold;      /* make text bold so it stands out */
+  color: black;           /* text color */
+}
+
+.static {
+  position: static;
+  background-color: aqua;
+}
+
+.relative {
+  position: relative;
+  top: 30px;
+  background-color: coral;
+}
