@@ -34,7 +34,8 @@ body {
 
 .relative {
   position: relative;
-  top: 30px;
+  top: 20px;
+  left: 30px;
   background-color: coral;
 }
 
@@ -48,5 +49,14 @@ body {
 
 .absolute {
   position: absolute;
+  top: 200px;
+  right: 200px;
   background-color: lightgreen;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: lightpink;
 }
