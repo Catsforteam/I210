@@ -24,6 +24,22 @@ h1, h2 {
   color: black;
 }
 
-.shadow {
+.shadow1 {
   text-shadow: 5px 5px;
+}
+
+.shadow2 {
+  text-shadow: 5px 5px 3px grey
+}
+
+.shadow3 {
+  text-shadow: -5px -5px 3px green;
+}
+
+.shadow4 {
+  text-shadow: 0px 0px 3px red;
+}
+
+.shadow5 {
+  text-shadow: 0px 0px 3px rgb(115, 0, 128), 10px 10px 3px rgb(0, 102, 128), 0px 0px 3px red
 }
