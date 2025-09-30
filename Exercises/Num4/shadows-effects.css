@@ -1,0 +1,29 @@
+/* ============================================================
+ GENERAL LOOK (not important, just to make things visible)
+ ============================================================ */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.5;
+}
+
+h1, h2 {
+  margin-top: 40px;
+}
+
+/* Common styles for demo boxes */
+.box, .round1, .round2, .round3, .round4,
+.grad1, .grad2, .grad3, .grad4, .grad5, .grad6, .grad7 {
+  width: 250px;
+  height: 80px;
+  margin: 20px 0;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 80px;
+  font-weight: bold;
+  color: black;
+}
+
+.shadow {
+  text-shadow: 5px 5px;
+}
