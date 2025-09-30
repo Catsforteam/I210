@@ -37,3 +37,16 @@ body {
   top: 30px;
   background-color: coral;
 }
+
+.container {
+  position: relative;
+  background-color: antiquewhite;
+  height: 200px;
+  border: 2px dashed gray;
+  padding: 20px;
+}
+
+.absolute {
+  position: absolute;
+  background-color: lightgreen;
+}
