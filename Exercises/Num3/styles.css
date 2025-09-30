@@ -60,3 +60,26 @@ body {
   left: 20px;
   background-color: lightpink;
 }
+
+.stack-container {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+.red {
+  background-color: red;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.blue {
+  background-color: blue;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 2;
+}
