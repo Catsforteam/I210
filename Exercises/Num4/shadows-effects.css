@@ -69,3 +69,32 @@ h1, h2 {
   box-shadow: -5px -2px 3px grey, 10px 10px 5px brown;
 }
 
+.round1 {
+  background: pink;
+  border-radius: 15px;
+}
+
+.round2 {
+  background: lightblue;
+  border-radius: 40px 10px;
+}
+
+.round3 {
+  background: lightgreen;
+  border-radius: 40px 20px 10px 5px;
+}
+
+.round4 {
+  background: lightyellow;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.grad1 {
+  background: linear-gradient(green, yellow);
+}
+
+.grad2 {
+  background: linear-gradient(to bottom right, blue, red);
+  color: azure;
+}
