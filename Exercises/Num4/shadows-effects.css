@@ -55,6 +55,17 @@ h1, h2 {
 }
 
 #box3 {
-  background: yellow;
-  box-shadow: -5px -5px 3px grey;
+  background: blue;
+  box-shadow: -5px -5px 3px rgb(255 0 0);
 }
+
+#box4 {
+  background: violet;
+  box-shadow: 5px 5px 5px 5px black;
+}
+
+#box5 {
+  background: orange;
+  box-shadow: -5px -2px 3px grey, 10px 10px 5px brown;
+}
+
