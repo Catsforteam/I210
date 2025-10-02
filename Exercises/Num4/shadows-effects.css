@@ -110,3 +110,11 @@ h1, h2 {
 .grad5 {
   background: radial-gradient(yellow, green);
 }
+
+.grad6 {
+  background: radial-gradient(yellow 20%, green 50%);
+}
+
+.grad7 {
+  background: radial-gradient(circle, red 20%, yellow 50%);
+}
