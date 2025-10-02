@@ -98,3 +98,15 @@ h1, h2 {
   background: linear-gradient(to bottom right, blue, red);
   color: azure;
 }
+
+.grad3 {
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+}
+
+.grad4 {
+  background: repeating-linear-gradient(to right, blue, yellow, green 33%);
+}
+
+.grad5 {
+  background: radial-gradient(yellow, green);
+}
