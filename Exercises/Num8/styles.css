@@ -1,0 +1,44 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: aliceblue;
+    color: #333;
+    padding: 20px;
+}
+
+h1{
+    color: orange
+}
+
+form {
+    background-color: aliceblue;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+input {
+    width: 300px;
+    padding: 5px;
+    margin: 10px;
+}
+
+button {
+    padding: 10px, 20px;
+    background-color: brown;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red;
+}
+ol {
+    margin: top 20px;
+}
+
+li {
+    background-color: tan;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid orangered;
+}
