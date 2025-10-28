@@ -1,0 +1,8 @@
+{
+    "students" : [
+        { "Name": "Riley" , "major" : "Game Design", "grade": 95 },
+        { "Name": "Billy" , "major" : "Math", "grade": 88 },
+        { "Name": "Bob" , "major" : "History", "grade": 92 },
+        { "Name": "Joe" , "major" : "English", "grade": 85 }
+    ]
+}
