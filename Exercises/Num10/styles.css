@@ -35,3 +35,27 @@ h2 {
     border-color: navy;
     box-shadow: 0 0 5px black
 }
+
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: black;
+    color: #fff;
+    font-size: 0.9rem;
+    margin: 5px 5px 15px 0;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: lightblue;
+}
+
+#sortAsc, #sortDesc {
+    background-color: tan;
+}
+
+#sortAsc:hover, #sortDesc:hover {
+    background-color: burlywood;
+}
