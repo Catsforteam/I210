@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: tan;
+    background-color: #ccc;
     color: black;
     display: flex;
     flex-direction: column;
@@ -19,4 +19,19 @@ h2 {
     color: navy;
     font-size: 2rem;
     text-align: center;
+}
+
+#filterInput {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-right: 10px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+#filterInput:focus {
+    border-color: navy;
+    box-shadow: 0 0 5px black
 }
