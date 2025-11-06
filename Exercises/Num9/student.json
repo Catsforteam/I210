@@ -3,6 +3,10 @@
         { "Name": "Riley" , "major" : "Game Design", "grade": 95 },
         { "Name": "Billy" , "major" : "Math", "grade": 88 },
         { "Name": "Bob" , "major" : "History", "grade": 92 },
-        { "Name": "Joe" , "major" : "English", "grade": 85 }
+        { "Name": "Joe" , "major" : "English", "grade": 67 },
+        { "Name": "Mark" , "major" : "Spanish", "grade": 23 },
+        { "Name": "Rob" , "major" : "Web Design", "grade": 98 },
+        { "Name": "Jerry" , "major" : "Geometry", "grade": 54 },
+        { "Name": "Jose" , "major" : "French", "grade": 71 }
     ]
 }
