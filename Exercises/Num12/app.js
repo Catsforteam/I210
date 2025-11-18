@@ -9,6 +9,10 @@ const firebaseConfig = {
   measurementId: "G-EDP6Z0WC7L"
 };
 
+
+// --- 2. INITIALIZE FIREBASE ---
+// The firebaseConfig object (not shown here) must be defined above this script.
+// It contains your Firebase project keys such as apiKey, databaseURL, etc.
 // This line initializes Firebase using that configuration.
 firebase.initializeApp(firebaseConfig);
 
