@@ -1,3 +1,8 @@
+// --- 2. INITIALIZE FIREBASE ---
+// The firebaseConfig object (not shown here) must be defined above this script.
+// It contains your Firebase project keys such as apiKey, databaseURL, etc.
+// This line initializes Firebase using that configuration.
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDQxETfI67in4wRXNKfpqf-fpglvUJmMjM",
   authDomain: "notesapp-f31ba.firebaseapp.com",
@@ -8,12 +13,6 @@ const firebaseConfig = {
   appId: "1:208358290960:web:82680959b55e1bfbf27c95",
   measurementId: "G-EDP6Z0WC7L"
 };
-
-
-// --- 2. INITIALIZE FIREBASE ---
-// The firebaseConfig object (not shown here) must be defined above this script.
-// It contains your Firebase project keys such as apiKey, databaseURL, etc.
-// This line initializes Firebase using that configuration.
 firebase.initializeApp(firebaseConfig);
 
 // The firebase.database() method gives us access to the Realtime Database service.
