@@ -1,0 +1,323 @@
+/* style.css
+   External CSS for the portfolio assignment
+   Comments are included to mark sections, animations, hover effects, and media queries.
+*/
+
+/* === Root variables & base styles === */
+:root{
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --accent: #2b7a78;
+  --accent-2: #3aa6b1;
+  --muted: #6b7280;
+  --radius: 12px;
+  --max-width: 1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#111827;
+  line-height:1.5;
+  display:flex;
+  justify-content:center;
+}
+
+/* Container helper */
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  padding:2rem;
+  margin:0 auto;
+}
+
+/* === Header Section === */
+/* Header Section */
+.header{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  gap:1rem;
+  align-items:center;
+  margin-top:1rem;
+  animation: header-fade 800ms ease forwards; /* Keyframe referenced below */
+  opacity:0; /* initial for fade */
+}
+
+#site-title{
+  margin:0;
+  font-size:1.8rem;
+  letter-spacing: -0.5px;
+}
+
+.main-nav{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+}
+
+.main-nav a{
+  text-decoration:none;
+  padding:0.5rem 0.75rem;
+  border-radius:8px;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+  color:var(--muted);
+  font-weight:600;
+}
+
+/* Hover effect for navigation links */
+/* Hover effect applied below */
+.main-nav a:hover,
+.main-nav a:focus{
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:white;
+  transform:translateY(-3px);
+  box-shadow:0 6px 18px rgba(43,122,120,0.12);
+}
+
+/* === About Section === */
+.about .about-content{
+  display:flex;
+  gap:1.25rem;
+  align-items:center;
+  margin-top:2rem;
+}
+
+/* Child selectors used here: target direct children inside the container */
+.about > .about-content > img{
+  width:200px;
+  height:200px;
+  object-fit:cover;
+  border-radius:12px;
+  border:4px solid white;
+  box-shadow:0 8px 30px rgba(16,24,40,0.06);
+}
+
+/* Child selector for paragraph styling */
+.about > .about-content > .about-text > p{
+  margin:0;
+  font-size:1.05rem;
+  color:#111827;
+}
+
+/* === Projects Section === */
+.projects h2{
+  margin-top:2rem;
+  margin-bottom:1rem;
+}
+
+/* Grid layout for project cards */
+.projects-grid{
+  display:grid;
+  gap:1.25rem;
+  grid-template-columns: repeat(3, 1fr); /* Desktop default */
+  margin-bottom:2rem;
+}
+
+.project-card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:0.8rem;
+  box-shadow:0 6px 18px rgba(16,24,40,0.04);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+}
+
+.project-card img{
+  width:100%;
+  border-radius:8px;
+  display:block;
+}
+
+/* Hover effect for project cards */
+/* Hover effect for project cards (scale/shadow animation) */
+.project-card:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 20px 40px rgba(16,24,40,0.12);
+  animation: card-hover-pop 260ms ease; /* animation defined below */
+}
+
+/* === Skills Section === */
+.skills h2{margin-top:1rem}
+.skills-grid{
+  list-style:none;
+  margin:1rem 0 2rem;
+  padding:0;
+  display:grid;
+  grid-template-columns: repeat(5, minmax(0,1fr));
+  gap:0.75rem;
+}
+
+/* Skill item styling */
+.skill-item{
+  background:var(--card);
+  padding:0.8rem;
+  border-radius:10px;
+  text-align:center;
+  font-weight:700;
+  box-shadow:0 6px 18px rgba(16,24,40,0.04);
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+  cursor:default;
+}
+
+/* Hover effect for skill items */
+/* Hover effect applied here */
+.skill-item:hover{
+  transform:translateY(-6px);
+  background:linear-gradient(90deg,var(--accent-2),var(--accent));
+  color:white;
+  box-shadow:0 18px 36px rgba(43,122,120,0.12);
+}
+
+/* === Contact Form Section === */
+.contact h2{margin-top:1rem}
+.contact-form{
+  display:grid;
+  gap:0.6rem;
+  max-width:640px;
+}
+
+.contact-form label{
+  font-size:0.9rem;
+  color:var(--muted);
+}
+
+/* Form inputs styling */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea{
+  padding:0.75rem;
+  border-radius:10px;
+  border:1px solid #e6e9ee;
+  background:white;
+  font-size:1rem;
+  outline:none;
+  transition: box-shadow 160ms ease, border-color 160ms ease, transform 120ms ease;
+}
+
+/* Focus effects for inputs */
+/* Focus effect for inputs applied below */
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color:var(--accent);
+  box-shadow:0 8px 20px rgba(43,122,120,0.08);
+  transform:translateY(-2px);
+}
+
+/* Submit button styling and hover */
+.btn{
+  margin-top:0.6rem;
+  padding:0.75rem 1rem;
+  border-radius:10px;
+  border:none;
+  font-weight:700;
+  cursor:pointer;
+  background:var(--accent);
+  color:white;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+/* Hover effect for submit button */
+/* Hover effect applied here */
+.btn:hover,
+.btn:focus{
+  transform:translateY(-4px);
+  background:linear-gradient(90deg,var(--accent-2),var(--accent));
+  box-shadow:0 14px 30px rgba(34,139,135,0.12);
+}
+
+/* Footer */
+.footer{
+  text-align:center;
+  padding:2rem;
+  color:var(--muted);
+  font-size:0.9rem;
+}
+
+/* === Keyframe animations === */
+/* Keyframe for header fade-in */
+@keyframes header-fade{
+  from{ opacity:0; transform:translateY(-8px) }
+  to{ opacity:1; transform:translateY(0) }
+}
+
+/* Keyframe for project card pop on hover */
+/* Keyframe for project cards */
+@keyframes card-hover-pop{
+  0%{ transform:translateY(0) scale(1) }
+  50%{ transform:translateY(-6px) scale(1.01) }
+  100%{ transform:translateY(-8px) scale(1.02) }
+}
+
+/* === Media Queries === */
+/* Mobile view styles */
+/* Mobile view styles begin */
+@media (max-width:600px){
+  .container{ padding:1rem; }
+
+  .header{
+    grid-template-columns: 1fr;
+    gap:0.5rem;
+    text-align:center;
+  }
+
+  .main-nav{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  #site-title{ font-size:1.4rem; }
+
+  .about .about-content{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+
+  .about > .about-content > img{ width:160px; height:160px; }
+
+  .projects-grid{
+    grid-template-columns: 1fr; /* Project cards in one column */
+  }
+
+  .skills-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap:0.5rem;
+  }
+
+  .contact-form{ width:100% }
+}
+
+/* Tablet view styles begin */
+@media (min-width:601px) and (max-width:900px){
+  .projects-grid{
+    grid-template-columns: repeat(2, 1fr); /* Tablet: two columns */
+  }
+
+  .skills-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about .about-content{
+    gap:1rem;
+  }
+}
+
+/* Desktop view: above 900px */
+/* Desktop view styles begin */
+@media (min-width:901px){
+  .header{
+    grid-template-columns: 1fr auto; /* name and nav side by side */
+  }
+
+  .projects-grid{
+    grid-template-columns: repeat(3, 1fr); /* Desktop: three columns */
+  }
+}
+
+/* End of style.css */
