@@ -1,9 +1,6 @@
-/* ================================
-   CLEAN + SIMPLE PORTFOLIO CSS
-   For Riley Collins
-================================ */
-
-/* --- Base & Variables --- */
+/* =======================
+   Variables & Global Styles
+======================= */
 :root {
   --bg: #f5f6fa;
   --card: #ffffff;
@@ -26,7 +23,6 @@ body {
   line-height: 1.5;
 }
 
-/* Reusable container */
 .container {
   width: 100%;
   max-width: var(--max-width);
@@ -34,17 +30,21 @@ body {
   padding: 2rem;
 }
 
-/* ================================
-   HEADER SECTION
-================================ */
+/* =======================
+   Header Section
+======================= */
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 1rem;
   padding: 1.5rem 2rem;
   background: var(--card);
-  animation: fadeIn 0.8s ease forwards;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  animation: fadeIn 0.8s ease forwards; /* Keyframe for header fade-in */
   opacity: 0;
 }
 
@@ -67,15 +67,15 @@ body {
   transition: 0.2s ease;
 }
 
-/* Hover effect for nav */
+/* Hover effect for navigation links */
 .main-nav a:hover {
   background: var(--accent);
   color: white;
 }
 
-/* ================================
-   ABOUT SECTION
-================================ */
+/* =======================
+   About Me Section
+======================= */
 .about-content {
   display: flex;
   gap: 1.5rem;
@@ -83,30 +83,34 @@ body {
   margin-top: 1.5rem;
 }
 
-/* Child selectors */
 .about > .about-content > img {
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: var(--radius);
+  transition: transform 0.3s ease; /* optional subtle hover effect */
+}
+
+.about > .about-content > img:hover {
+  transform: scale(1.05);
 }
 
 .about > .about-content > .about-text > p {
   margin: 0;
+  max-width: 600px;
 }
 
-/* ================================
-   PROJECTS SECTION
-================================ */
+/* =======================
+   Projects Section
+======================= */
 .projects h2 {
   margin-bottom: 1rem;
 }
 
-/* Grid layout */
 .projects-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* Desktop default */
 }
 
 .project-card {
@@ -117,7 +121,7 @@ body {
   transition: 0.25s ease;
 }
 
-/* Hover effect */
+/* Hover effect for project cards */
 .project-card:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
@@ -128,13 +132,13 @@ body {
   border-radius: var(--radius);
 }
 
-/* ================================
-   SKILLS SECTION
-================================ */
+/* =======================
+   Skills Section
+======================= */
 .skills-grid {
   display: grid;
   gap: 0.75rem;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr); /* Desktop default */
   list-style: none;
   padding: 0;
 }
@@ -148,14 +152,15 @@ body {
   transition: 0.2s ease;
 }
 
+/* Hover effect for skill items */
 .skill-item:hover {
   background: var(--accent);
   color: white;
 }
 
-/* ================================
-   CONTACT FORM
-================================ */
+/* =======================
+   Contact Form Section
+======================= */
 .contact-form {
   display: grid;
   gap: 0.7rem;
@@ -171,6 +176,7 @@ body {
   transition: 0.2s ease;
 }
 
+/* Focus effect for inputs and textarea */
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: var(--accent);
@@ -187,23 +193,23 @@ body {
   transition: 0.2s ease;
 }
 
-/* Hover button */
+/* Hover effect for submit button */
 .btn:hover {
   transform: translateY(-2px);
 }
 
-/* ================================
-   FOOTER
-================================ */
+/* =======================
+   Footer Section
+======================= */
 .footer {
   text-align: center;
   padding: 1rem;
   color: var(--muted);
 }
 
-/* ================================
-   ANIMATIONS
-================================ */
+/* =======================
+   Animations
+======================= */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -215,13 +221,12 @@ body {
   }
 }
 
-/* ================================
-   MEDIA QUERIES
-================================ */
+/* =======================
+   Media Queries
+======================= */
 
-/* Mobile */
+/* Mobile view styles */
 @media (max-width: 600px) {
-
   .header {
     grid-template-columns: 1fr;
     text-align: center;
@@ -246,9 +251,8 @@ body {
   }
 }
 
-/* Tablet */
+/* Tablet view styles */
 @media (min-width: 601px) and (max-width: 900px) {
-
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -258,10 +262,13 @@ body {
   }
 }
 
-/* Desktop */
+/* Desktop view styles */
 @media (min-width: 901px) {
-
   .projects-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
