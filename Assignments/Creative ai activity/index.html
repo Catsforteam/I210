@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Food Symbol — Pizza Slice</title>
+  <style>
+    /* Page layout */
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(180deg, #fff9f2 0%, #fff3e6 100%);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    .card {
+      width: 360px;
+      padding: 26px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(34, 40, 49, 0.12);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 14px 0;
+      color: #2b2e33;
+      font-size: 20px;
+    }
+
+    p.note {
+      margin: 8px 0 18px 0;
+      color: #656b72;
+      font-size: 13px;
+    }
+
+    /* SVG container sizing */
+    .food-svg {
+      width: 220px;
+      height: 260px;
+      display: inline-block;
+    }
+
+    /* Topping drop shadow glow using CSS filter reference */
+    .topping {
+      filter: drop-shadow(0 2px 2px rgba(0,0,0,0.12));
+      transition: transform 220ms ease;
+    }
+
+    /* small hover playful pop for toppings */
+    .topping:hover {
+      transform: translateY(-6px) scale(1.06);
+    }
+
+    /* crust highlight for depth */
+    .crust {
+      stroke: rgba(0,0,0,0.06);
+      stroke-width: 1;
+    }
+
+    /* accessibility: focus style for SVG when keyboard navigated */
+    .food-svg:focus {
+      outline: 3px solid rgba(30,58,138,0.18);
+      outline-offset: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Symbol: Pizza Slice (Food)</h1>
+    <p class="note">A simple food symbol representing warmth, sharing, and comfort.</p>
+
+    <!-- SVG pizza slice -->
+    <svg class="food-svg" viewBox="0 0 220 260" role="img" aria-labelledby="title desc" tabindex="0">
+      <title id="title">Stylized pizza slice</title>
+      <desc id="desc">A triangular slice of pizza with a golden cheese triangle, curved crust, and pepperoni toppings.</desc>
+
+      <!-- Background circle for composition balance (subtle) -->
+      <circle cx="110" cy="120" r="86" fill="rgba(255,200,120,0.06)"/>
+
+      <!-- Cheese (triangle) -->
+      <path d="M40 30 L180 30 L110 210 Z"
+            fill="#FFC857" stroke="#E6A849" stroke-width="2" />
+
+      <!-- Melt drips (small curved shapes) -->
+      <path d="M85 150 q10 18 28 0" fill="#FFB85C" opacity="0.95" />
+      <path d="M120 160 q8 16 22 2" fill="#FFB85C" opacity="0.95" />
+
+      <!-- Crust (rounded arc along top of slice) -->
+      <path class="crust"
+            d="M34 28
+               C70 -4, 150 -4, 186 28
+               C170 18, 127 18, 110 28
+               C93 18, 50 18, 34 28 Z"
+            fill="#D3A15A" />
+
+      <!-- Outer crust lip -->
+      <path d="M40 30 C70 6, 150 6, 180 30" fill="none" stroke="#b27f46" stroke-width="3" stroke-linecap="round" />
+
+      <!-- Toppings: pepperoni circles -->
+      <g aria-hidden="true">
+        <circle class="topping" cx="85" cy="80" r="14" fill="#D94B3A" />
+        <circle class="topping" cx="125" cy="95" r="16" fill="#D94B3A" />
+        <circle class="topping" cx="100" cy="135" r="13" fill="#D94B3A" />
+        <circle class="topping" cx="70" cy="120" r="11" fill="#D94B3A" />
+      </g>
+
+      <!-- Topping highlights -->
+      <g opacity="0.18" fill="#fff">
+        <ellipse cx="80" cy="72" rx="5" ry="3"/>
+        <ellipse cx="121" cy="88" rx="6" ry="3"/>
+      </g>
+
+      <!-- small seeds/texture on crust -->
+      <circle cx="55" cy="28" r="2.2" fill="#b27f46" opacity="0.6"/>
+      <circle cx="145" cy="30" r="2.2" fill="#b27f46" opacity="0.5"/>
+
+    </svg>
+
+    <p class="note">Tip: hover over the pepperoni for a small pop.</p>
+  </div>
+</body>
+</html>
