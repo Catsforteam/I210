@@ -54,3 +54,114 @@ submitButton.addEventListener('click', () => {
   // After adding the note to Firebase, clear the input box for the next note.
   noteInput.value = '';
 });
+
+// Read Op
+
+notesRef.on('child_added',(snapshot) => {
+  // Step 1: Extract ID and object
+  const noteId = snapshot.key;
+  const newNote = snapshot.val();
+
+  const notesElement = createNoteElement(noteId, newNote.text);
+
+  notesContainer.prepend(notesElement);
+
+})
+
+
+function createNoteElement(noteId, noteText) {
+ 
+  // Outer Box
+  const noteElement = document.createElement('div');
+  noteElement.classList.add('note');
+  noteElement.setAttribute('data-id', noteId);
+
+  //text
+  const noteTextElement = document.createElement('span');
+  noteTextElement.textContent = noteText;
+  noteElement.appendChild(noteTextElement);
+  // Delete Button
+  const deleteButton = document.createElement('button');
+  deleteButton.classList.add('delete-btn');
+  deleteButton.innerText = 'Delete';
+  deleteButton.addEventListener('click' ,() =>{
+    deleteNote(noteId);
+  });
+  noteElement.appendChild(deleteButton);
+   // Edit Button
+  const editButton = document.createElement('button');
+  editButton.classList.add('edit-btn');
+  editButton.innerText = 'Edit';
+  editButton.addEventListener('click', () => {
+    const currentText = noteElement.querySelector('span').innerText;
+    editNote(noteId,currentText);
+  });
+  noteElement.appendChild(editButton);
+
+ 
+
+
+
+
+ 
+
+
+
+  return noteElement;
+
+}
+
+function deleteNote(noteId) {
+  // Create a reference to the specific note to be deleted
+  const specificNoteRef = database.ref('notes/' + noteId);
+
+  // Remove the note from the database
+  specificNoteRef.remove();
+}
+
+notesRef.on('child_removed', (snapshot) => {
+
+  const noteId = snapshot.key;
+
+  const noteElement = document.querySelector(`div[data-id="${noteId}"]`);
+
+  if(noteElement) {
+    noteElement.remove();}
+   
+});
+
+
+
+
+function editNote (noteId,currentText){
+   // prompt is a built in tool that forces a small popup window to appear
+   // We gibes it two things
+   // 1] the Question : 'Fix your typo:'(this tells user what to do)
+   //2] the Default Answer :currentText (this puts therire old note in the box auto)
+  const newText = prompt('Fix your typo:' ,currentText);
+
+
+  if(newText && newText.trim() !==''){
+
+    const specificNoteRef = database.ref('notes/' +noteId);
+
+    specificNoteRef.update({
+      text : newText
+    });
+
+  }
+
+}
+
+
+notesRef.on('child_changed', (snapshot) =>{
+
+  const noteId = snapshot.key;
+  const updatedNote = snapshot.val();
+  const noteElement = document.querySelector(`div[data-id="${noteId}"]`);
+  // if it exists locate the <span> inside and update its displayed text
+  if(noteElement){
+    noteElement.querySelector('span').innerText = updatedNote.text;
+  }
+
+})
